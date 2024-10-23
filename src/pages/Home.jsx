@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+import ListaProdutos from "../ListaProdutos";
+
 
 
 export default function Home (){
     
-const [lista, setLista] =  useState([lista]);
+const [listaHome, setLista] =  useState([]);
 
 useEffect(() => {
     const receberListaProdutos = async () => {
@@ -20,7 +22,7 @@ useEffect(() => {
 
 return (
     <>
-      <ListaProdutos lista={produtos}/>
+      <ListaProdutos lista={listaHome}/>
     </>
   );
 }

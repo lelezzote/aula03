@@ -6,15 +6,15 @@ export default function ListaProdutos({lista}){
         <ul>
           {
           lista.map(produto => (
-            <div key={produto.id}>
+            <ul key={produto.id}>
               <img src={produto.image} alt={produto.title} width={100}/>
               <h2>{produto.title}</h2>
-              <p>{produto.description}</p>
-              <p>Preço: ${produto.price}</p>
-              <p>{produto.category}</p>
-              <p>{produto.rating.rate}</p>
-              <p>{produto.rating.count}</p>
-            </div>
+              <li>{produto.description}</li>
+              <li>Preço: ${produto.price}</li>
+              <li>{produto.category}</li>
+              <li>{produto.rating.rate}</li>
+              <li>{produto.rating.count}</li>
+            </ul>
           ))}
         </ul>
       </>
