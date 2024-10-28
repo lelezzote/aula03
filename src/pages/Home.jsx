@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ListaProdutos from "../ListaProdutos";
+import ListaProdutos from "../component/ListaProdutos";
 
 
 
@@ -22,7 +22,7 @@ useEffect(() => {
 
 return (
     <>
-      <ListaProdutos lista={listaHome}/>
+      <ListaProdutos  lista={listaHome}/>
     </>
   );
 }

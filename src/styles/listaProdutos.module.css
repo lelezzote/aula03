@@ -1,0 +1,21 @@
+.blocoLista{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: black;
+    font-family:monospace;
+    
+}
+
+.blocoCards{
+    list-style: none;
+    border-radius: 8px; 
+    overflow: hidden;
+    padding: 14px;
+    width: 400px;
+    margin-left: 95px;
+}
+
+.tituloPagina{
+    text-align: center;
+}
