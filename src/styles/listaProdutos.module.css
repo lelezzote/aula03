@@ -1,21 +1,27 @@
-.blocoLista{
+.blocoLista {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     color: black;
-    font-family:monospace;
-    
+    font-family: monospace;
 }
 
-.blocoCards{
+.blocoCards {
     list-style: none;
     border-radius: 8px; 
     overflow: hidden;
     padding: 14px;
     width: 400px;
     margin-left: 95px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.tituloPagina{
+.blocoCards:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.tituloPagina {
     text-align: center;
 }
+

@@ -9,12 +9,12 @@ export default function ListaProdutos({lista}){
           lista.map(produto => (
             <ul className={styles.blocoCards} key={produto.id}>
               <img src={produto.image} alt={produto.title} width={300} height={300}/>
-              <h2 >{produto.title} </h2>
-              <li className={styles.list}>{produto.description}</li>
+              <h2>{produto.title} </h2>
               <li>Preço: ${produto.price}</li>
-              <li>{produto.category}</li>
-              <li>{produto.rating.rate}</li>
-              <li>{produto.rating.count}</li>
+              <li>Category: {produto.category}</li>
+              <li>Rating rate: {produto.rating.rate}</li>
+              <li>Rating count: {produto.rating.count}</li>
+              <li className={styles.list}>Description: {produto.description}</li>
             </ul>
           ))}
         </div>
