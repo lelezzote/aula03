@@ -10,7 +10,6 @@
     list-style: none;
     padding: 14px;
     width: 400px;
-    
     margin-left: 20px;
 }
 
@@ -30,7 +29,9 @@
     font-size: .875rem;
     color: #333; 
     margin-bottom: 10px; 
+    text-transform: uppercase; 
 }
+
 .blocoCards li {
     font-size: 12px; 
     margin-bottom: 5px; 
