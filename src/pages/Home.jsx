@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import ListaProdutos from "../component/ListaProdutos";
+import Loading from "../component/Loanding";
 
 
 
@@ -19,10 +20,16 @@ useEffect(() => {
     }
     receberListaProdutos(); 
 }, []);
+ 
+
+
+
+
 
 return (
     <>
       <ListaProdutos  lista={listaHome}/>
+     
     </>
   );
 }

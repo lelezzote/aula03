@@ -1,6 +1,11 @@
 import styles from '../styles/listaProdutos.module.css'
+import Loading from '../component/Loanding'
 
 export default function ListaProdutos({lista}){
+  if (lista.length === 0 ){
+    return <Loading/>
+ }
+
     return(
         <>
         <h1 className={styles.tituloPagina}>Lista de Produtos</h1>
@@ -16,6 +21,7 @@ export default function ListaProdutos({lista}){
               <li>Rating count: {produto.rating.count}</li>
               <li className={styles.list}>{/*Description: {produto.description} */}</li>
             </ul>
+            
           ))}
         </div>
       </>
