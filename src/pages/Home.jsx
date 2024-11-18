@@ -21,14 +21,38 @@ useEffect(() => {
     receberListaProdutos(); 
 }, []);
  
+const ordemAz = () => {
+ const listaOrdenada = [...listaHome].sort((a, b) => a.title.localeCompare(b.title));
+  setLista(listaOrdenada);
+}
 
+const ordemZa = () => {
+  const listaOrdenada = [...listaHome].reverse((a, b) => a.title.localeCompare(b.title));
+   setLista(listaOrdenada);
+ }
 
-
-
+const filtroPreco = () => {
+  const filtro = [...listaHome].((price)) 
+}
 
 return (
     <>
+
+    <button onClick={() => ordemAz()}>
+       AZ
+    </button>
+
+    <button onClick ={() => ordemZa()}>
+       ZA
+    </button>
+
+      <input
+      placeholder="Pesquisar"
+      onChange={(event) => buscaProdutos(event.target.value)}>
+        </input>
+
       <ListaProdutos  lista={listaHome}/>
+
      
     </>
   );
