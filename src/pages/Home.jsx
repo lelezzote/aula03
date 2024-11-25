@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ListaProdutos from "../component/ListaProdutos";
-import Loading from "../component/Loanding";
+
 
 
 
@@ -31,9 +31,12 @@ const ordemZa = () => {
    setLista(listaOrdenada);
  }
 
-const filtroPreco = () => {
-  const filtro = [...listaHome].((price)) 
+const precoAB = () => {
+    const filtro = [...listaHome].sort((a, b) => b.preco - a.preco);
+    setLista(filtro);
 }
+
+
 
 return (
     <>
