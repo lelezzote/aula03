@@ -21,22 +21,35 @@ useEffect(() => {
     receberListaProdutos(); 
 }, []);
  
+//de A para Z
 const ordemAz = () => {
  const listaOrdenada = [...listaHome].sort((a, b) => a.title.localeCompare(b.title));
   setLista(listaOrdenada);
 }
 
+//de Z para A
 const ordemZa = () => {
   const listaOrdenada = [...listaHome].reverse((a, b) => a.title.localeCompare(b.title));
    setLista(listaOrdenada);
  }
 
-const precoAB = () => {
-    const filtro = [...listaHome].sort((a, b) => b.preco - a.preco);
+ //do MAIOR para o MENOR
+const precoDescrescente = () => {
+    const filtro = [...listaHome].sort((a, b) => b.price - a.price);
     setLista(filtro);
 }
 
+//do MENOR para o MAIOR
+const precoCrescente = () => {
+  const filtro = [...listaHome].sort((a, b) => a.price - b.price);
+  setLista(filtro);
+}
 
+//Pesquisar
+const buscaProdutos = () => {
+  const busca = document.getElementById("search-Box").value;
+  const resultado = [...listaHome].filter(produto => produto.title.includes(busca))
+}
 
 return (
     <>
@@ -48,6 +61,14 @@ return (
     <button onClick ={() => ordemZa()}>
        ZA
     </button>
+
+    <button onClick ={() => precoDescrescente()}>
+    AB
+ </button>
+
+ <button onClick ={() => precoCrescente()}>
+    BA
+ </button>
 
       <input
       placeholder="Pesquisar"
