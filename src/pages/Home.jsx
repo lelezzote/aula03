@@ -45,11 +45,21 @@ const precoCrescente = () => {
   setLista(filtro);
 }
 
-//Pesquisar
-const buscaProdutos = () => {
-  const busca = document.getElementById("search-Box").value;
-  const resultado = [...listaHome].filter(produto => produto.title.includes(busca))
-}
+//pesquisar
+const buscaProdutos = (valor) => {
+  const busca = valor.toLowerCase();
+  const produtosFiltrados = listaHome.filter((produto) =>
+    produto.title.toLowerCase().includes(busca)
+  );
+  setLista(produtosFiltrados); 
+};
+
+
+
+
+
+
+
 
 return (
     <>
@@ -63,17 +73,20 @@ return (
     </button>
 
     <button onClick ={() => precoDescrescente()}>
-    AB
+    Descrecente
  </button>
 
  <button onClick ={() => precoCrescente()}>
-    BA
+    Crescente
  </button>
 
-      <input
-      placeholder="Pesquisar"
-      onChange={(event) => buscaProdutos(event.target.value)}>
-        </input>
+ <input
+  type="text"
+  onChange={(event) => buscaProdutos(event.target.value)} // chama a função com o valor digitado
+  placeholder="Pesquisar"
+  id="search-Box"
+/>
+
 
       <ListaProdutos  lista={listaHome}/>
 
